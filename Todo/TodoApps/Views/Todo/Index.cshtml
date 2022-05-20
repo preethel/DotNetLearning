@@ -1,0 +1,70 @@
+﻿@model IEnumerable<TodoList>
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container p-6">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2>Todo List</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Todo" asp-action="Create" class="btn btn-primary">Create New Todo</a>
+        </div>
+    </div>
+
+    <table class="p-5 m-3">
+        <thead>
+            <tr>
+                <th width="10%" class="p-2">
+                    Id
+                </th>
+                <th width="20%" class="p-2">
+                    Title
+                </th>
+                <th width="20" class="p-2">
+                    Description
+                </th>
+                <th width="20%" class="p-2">
+                    Initial Time
+                </th>
+                <th width="20%" class="p-2">
+                    Expected Ending Time
+                </th>
+                <th width="10%" class="p-2">
+                    Status
+                </th>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var obj in Model) {
+                <tr>
+                    <td class="p-2">
+                        @obj.Id
+                    </td>
+                    <td class="p-2">
+                        @obj.Title
+                    </td>
+                    <td class="p-2">
+                        @obj.Description
+                    </td>
+                    <td class="p-2">
+                        @obj.StartedTime
+                    </td>
+                    <td class="p-2">
+                        @obj.EndTime        
+                    </td>
+                    <td class="p-2">
+                        @if (obj.EndTime < DateTime.Now || obj.EndTime == DateTime.Now)
+                        {
+                            <p>Completed</p>
+                        }else{
+                        <p>Running</p>
+                        }
+                    </td>
+        </tr>
+        }
+
+    </tbody>
+</table>
+</div>
