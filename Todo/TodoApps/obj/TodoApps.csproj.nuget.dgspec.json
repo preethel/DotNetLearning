@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pc\\Documents\\DotnetProjectsLearning\\Todo\\TodoApps\\TodoApps.csproj": {}
+    "C:\\Users\\pc\\DotNetLearning\\Todo\\TodoApps\\TodoApps.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pc\\Documents\\DotnetProjectsLearning\\Todo\\TodoApps\\TodoApps.csproj": {
+    "C:\\Users\\pc\\DotNetLearning\\Todo\\TodoApps\\TodoApps.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Documents\\DotnetProjectsLearning\\Todo\\TodoApps\\TodoApps.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\DotNetLearning\\Todo\\TodoApps\\TodoApps.csproj",
         "projectName": "TodoApps",
-        "projectPath": "C:\\Users\\pc\\Documents\\DotnetProjectsLearning\\Todo\\TodoApps\\TodoApps.csproj",
+        "projectPath": "C:\\Users\\pc\\DotNetLearning\\Todo\\TodoApps\\TodoApps.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Documents\\DotnetProjectsLearning\\Todo\\TodoApps\\obj\\",
+        "outputPath": "C:\\Users\\pc\\DotNetLearning\\Todo\\TodoApps\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,11 +40,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "EntityFramework": {
-              "target": "Package",
-              "version": "[6.4.4, )"
-            },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0-preview.4.22229.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0-preview.4.22229.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.0-preview.4.22229.2, )"
             }
